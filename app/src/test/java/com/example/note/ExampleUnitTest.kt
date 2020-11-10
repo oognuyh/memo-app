@@ -1,4 +1,4 @@
-package com.example.memo
+package com.example.note
 
 import org.junit.Test
 
