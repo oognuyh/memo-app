@@ -1,9 +1,9 @@
 package com.example.note.repository
 
-import com.example.note.db.Note
+import com.example.note.model.Note
 import com.example.note.db.NoteDatabase
 
-class NoteRepository(val db: NoteDatabase) {
+class NoteRepository(private val db: NoteDatabase) {
 
     fun getNote() = db.getNoteDao().getAllNotes()
 

@@ -1,6 +1,7 @@
 package com.example.note.db
 
 import androidx.room.*
+import com.example.note.model.Note
 
 @Dao
 interface NoteDao {
