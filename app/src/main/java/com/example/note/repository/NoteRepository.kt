@@ -5,12 +5,14 @@ import com.example.note.db.NoteDatabase
 
 class NoteRepository(private val db: NoteDatabase) {
 
-    fun getNote() = db.getNoteDao().getAllNotes()
+    fun getAllNotes() = db.getNoteDao().getAllNotes()
 
-    fun deleteNote(note: Note) = db.getNoteDao().delete(note)
+    fun search(query: String) = db.getNoteDao().search(query)
 
-    fun updateNote(note: Note) = db.getNoteDao().update(note)
+    suspend fun delete(note: Note) = db.getNoteDao().delete(note)
 
-    fun addNote(note: Note) = db.getNoteDao().insert(note)
+    suspend fun update(note: Note) = db.getNoteDao().update(note)
+
+    suspend fun add(note: Note) = db.getNoteDao().insert(note)
 
 }

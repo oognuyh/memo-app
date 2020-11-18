@@ -18,8 +18,8 @@
 
     <fragment
         android:id="@+id/noteFragment"
-        android:name="com.example.note.ui.NoteFragment"
-        tools:layout="@layout/fragment_note"
+        android:name="com.example.note.ui.DetailFragment"
+        tools:layout="@layout/fragment_detail"
         android:label="NoteFragment" />
 
 </navigation>

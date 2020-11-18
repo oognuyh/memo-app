@@ -1,30 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <LinearLayout
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp">
+
+    <com.ramotion.foldingcell.FoldingCell
+        android:id="@+id/folding_cell"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/tv_note_title"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:text="Title"/>
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/tv_note_content"
+        <FrameLayout
+            android:id="@+id/fl_note_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="content"/>
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/tv_note_content"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scrollbars="vertical"
+                android:text="CONTENT"/>
+        </FrameLayout>
 
-        <TextView
-            android:id="@+id/tv_note_date"
+        <FrameLayout
+            android:id="@+id/fl_note_out"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="viewEnd"
-            android:text="2020.11.15 22:58"/>
-    </LinearLayout>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_note_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center|start"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:maxLines="1"
+                android:ems="10"
+                android:ellipsize="end"
+                android:text="TITLE"/>
+            <TextView
+                android:id="@+id/tv_note_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="bottom|end"
+                android:layout_marginEnd="10dp"
+                android:text="2020.11.06 09:50"/>
+
+        </FrameLayout>
+    </com.ramotion.foldingcell.FoldingCell>
 </androidx.cardview.widget.CardView>

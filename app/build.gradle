@@ -17,6 +17,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    androidExtensions {
+        experimental = true
+    }
+
     kotlinOptions {
         jvmTarget="1.8"
     }
@@ -60,4 +64,12 @@ dependencies {
     // Navigation Component
     implementation "androidx.navigation:navigation-fragment-ktx:2.3.1"
     implementation "androidx.navigation:navigation-ui-ktx:2.3.1"
+
+    // Folding Cell
+    implementation "com.ramotion.foldingcell:folding-cell:1.2.3"
+
+    // Groupie
+    implementation "com.xwray:groupie:2.8.1"
+    implementation "com.xwray:groupie-kotlin-android-extensions:2.8.1"
+    implementation "com.xwray:groupie-databinding:2.8.1"
 }
