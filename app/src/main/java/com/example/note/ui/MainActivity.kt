@@ -3,14 +3,13 @@ package com.example.note.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.*
 import com.example.note.R
 import com.example.note.db.NoteDatabase
 import com.example.note.repository.NoteRepository
-import com.example.note.util.toast
+import com.example.note.utils.toast
 import com.example.note.viewmodel.NoteViewModel
 import com.example.note.viewmodel.NoteViewModelFactory
 import java.lang.Exception

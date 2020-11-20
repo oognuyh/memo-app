@@ -11,7 +11,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:orientation="vertical">
-        <TextView
+        <EditText
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:id="@+id/tv_detail_title"
@@ -20,22 +20,26 @@
             android:textSize="25sp"
             android:textStyle="bold"
             android:maxLines="1"
-            android:textAlignment="textStart"
-            android:text="TITLE"/>
+            android:background="@null"
+            android:nextFocusDown="@id/tv_detail_content"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            android:hint="TITLE"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="#262626"/>
 
-        <TextView
+        <EditText
             android:id="@+id/tv_detail_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
+            android:background="@null"
             android:scrollbars="vertical"
-            android:text="abcdefghijklmnopqrstuvwxyz"/>
-
+            android:hint="content"
+            android:importantForAutofill="no"
+            android:gravity="top" />
     </LinearLayout>
-
 </LinearLayout>

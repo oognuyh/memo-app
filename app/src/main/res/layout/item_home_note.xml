@@ -5,12 +5,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="10dp"
     app:cardCornerRadius="15dp">
 
     <com.ramotion.foldingcell.FoldingCell
         android:id="@+id/folding_cell"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false">
 
         <FrameLayout
             android:id="@+id/fl_note_in"
@@ -21,6 +24,7 @@
                 android:id="@+id/tv_note_content"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:layout_margin="10dp"
                 android:scrollbars="vertical"
                 android:text="CONTENT"/>
         </FrameLayout>
