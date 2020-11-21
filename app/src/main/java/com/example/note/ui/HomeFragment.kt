@@ -42,14 +42,14 @@ class HomeFragment: Fragment(R.layout.fragment_home), View.OnClickListener, Sear
 
     private fun observeAllNotes() {
         viewModel.getAllNotes().observe(viewLifecycleOwner) {notes ->
-            adapter.updateAsync(notes.toNoteItems(this))
+            adapter.update(notes.toNoteItems(this))
         }
     }
 
     private fun observeSearchedNotes(text: String) {
         val query = "%$text%"
         viewModel.search(query).observe(viewLifecycleOwner) {notes ->
-            adapter.updateAsync(notes.toNoteItems(this))
+            adapter.update(notes.toNoteItems(this))
         }
     }
 

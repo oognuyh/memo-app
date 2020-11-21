@@ -10,8 +10,7 @@
         android:id="@+id/homeFragment"
         android:name="com.example.note.ui.HomeFragment"
         tools:layout="@layout/fragment_home"
-
-        android:label="HomeFragment">
+        android:label="">
         <action
             android:id="@+id/action_homeFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
@@ -20,8 +19,7 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.note.ui.DetailFragment"
-        tools:layout="@layout/fragment_detail"
-        android:label="DetailFragment" >
+        tools:layout="@layout/fragment_detail">
         <argument
             android:name="note"
             app:argType="com.example.note.model.Note" />

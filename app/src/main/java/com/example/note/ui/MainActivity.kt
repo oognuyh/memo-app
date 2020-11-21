@@ -16,6 +16,8 @@ import com.example.note.repository.NoteRepository
 import com.example.note.utils.toast
 import com.example.note.viewmodel.NoteViewModel
 import com.example.note.viewmodel.NoteViewModelFactory
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.appbar.*
 
 class MainActivity : AppCompatActivity() {
     private val navController by lazy { findNavController(R.id.nav_host_fragment) }
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setupActionBar()
+        setupAppBar()
         setupViewModel()
     }
 
@@ -50,7 +52,8 @@ class MainActivity : AppCompatActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
-    private fun setupActionBar() {
+    private fun setupAppBar() {
+        setSupportActionBar(toolbar)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
