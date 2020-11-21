@@ -62,14 +62,12 @@ class HomeFragment: Fragment(R.layout.fragment_home), View.OnClickListener, Sear
         val searchView = search.actionView as SearchView
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                collapseSearchView()
                 return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 if (newText != null) {
                     if (newText.isNotEmpty() and newText.isNotBlank()) {
-                        context?.toast("not null or blank")
                         observeSearchedNotes(newText)
                     }
                     else {
