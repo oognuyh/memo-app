@@ -1,24 +1,28 @@
 package com.example.note.utils
 
 import android.content.Context
-import android.content.Context.INPUT_METHOD_SERVICE
 import android.view.View
-import android.view.inputmethod.InputMethodManager
-import android.view.inputmethod.InputMethodManager.HIDE_NOT_ALWAYS
 import android.widget.Toast
 import com.example.note.model.Note
+import com.example.note.ui.SearchViewListener
 import com.example.note.ui.adapters.NoteItem
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 fun Context.toast(message: CharSequence) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
 
-fun List<Note>.toNoteItems() : List<NoteItem> {
-    return this.map {
-        NoteItem(it)
+fun View.snackbar(message: CharSequence) {
+    CoroutineScope(Dispatchers.Main).launch {
+        Snackbar.make(this@snackbar, message, Snackbar.LENGTH_SHORT).show()
     }
 }
 
-fun View.hideKeyboard() {
-    (context.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager).hideSoftInputFromWindow(windowToken, HIDE_NOT_ALWAYS)
+fun List<Note>.toNoteItems(listener: SearchViewListener) : List<NoteItem> {
+    return this.map {
+        NoteItem(it, listener)
+    }
 }

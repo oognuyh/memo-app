@@ -9,8 +9,8 @@ import kotlinx.android.parcel.Parcelize
 @Entity(tableName = "notes")
 data class Note(
     @PrimaryKey(autoGenerate = true) var id: Int = 0,
-    var title: String,
+    var title: String = "",
     var content: String = "",
-    var date: String,
+    var date: String = "",
     var color: Int = -1
 ) : Parcelable
