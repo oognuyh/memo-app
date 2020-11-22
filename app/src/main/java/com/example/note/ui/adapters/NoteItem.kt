@@ -42,6 +42,10 @@ class NoteItem(private val note: Note, private val listener: SearchViewListener)
         }
     }
 
+    fun getNote(): Note {
+        return note
+    }
+
     @SuppressLint("ClickableViewAccessibility")
     private fun setupScroll(view: View) {
         // to scroll the content text(ref - https://gist.github.com/hilfritz/23ae7e8072de6f9ff1577a439828e016)
