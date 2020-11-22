@@ -10,7 +10,8 @@ Simple note app created with Kotlin, MVVM architecture and some libraries
 * Search
 * Edit
 
-## Screenshots
+## Demo
+<img src="https://user-images.githubusercontent.com/48203569/99905679-ae7e2d80-2d15-11eb-8807-0e4ab73fd74b.gif" width="250" height="400">  
 
 ## Library used
 * [Coroutines](https://developer.android.com/topic/libraries/architecture/coroutines)
