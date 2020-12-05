@@ -1,5 +1,5 @@
 # **Note App**
-Simple note app created with Kotlin, MVVM architecture and some libraries
+Simple note app created with Kotlin, MVVM architecture and some libraries.
 
 ## Sketch
 ![note-app](https://user-images.githubusercontent.com/48203569/99637170-d0fb1700-2a87-11eb-8f03-d265d0518ec3.jpg)
